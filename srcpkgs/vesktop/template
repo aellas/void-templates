@@ -1,0 +1,26 @@
+# Template file for 'vesktop'
+pkgname=vesktop
+version=1.5.5
+revision=1
+archs="x86_64"
+hostmakedepends="tar xz"
+short_desc="Custom Discord client for better performance"
+maintainer="bitterhalt <bthalt@disroot.org>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/Vencord/Vesktop"
+distfiles="https://github.com/Vencord/Vesktop/releases/download/v${version}/vesktop_${version}_amd64.deb"
+checksum=77e22dbba3d305361363be5d6aef53a47fd4ba5f53a4a9aa28e98a2b6e988445
+
+do_extract() {
+	ar x ${XBPS_SRCDISTDIR}/${pkgname}-${version}/vesktop_${version}_amd64.deb
+		tar xf data.tar.xz -C ${wrksrc}
+}
+
+do_install() {
+	vmkdir /usr/share
+		vmkdir /opt/Vesktop
+
+# Copy the files and directories
+		vcopy usr/share/* /usr/share/
+		vcopy opt/Vesktop/* /opt/Vesktop/
+}
