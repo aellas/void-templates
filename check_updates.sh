@@ -5,6 +5,7 @@ declare -A templates=(
   [Floorp]="$HOME/Documents/void/void-templates/srcpkgs/floorp-bin/template"
   [Brave]="$HOME/Documents/void/void-templates/srcpkgs/brave-browser/template"
   [YoutubeMusic]="$HOME/Documents/void/void-templates/srcpkgs/youtube-music/template"
+  [Liquidctl]="$HOME/Documents/void/void-templates/srcpkgs/liquidctl/template"
 )
 
 declare -A github_repos=(
@@ -12,6 +13,7 @@ declare -A github_repos=(
   [Floorp]="Floorp-Projects/Floorp"
   [Brave]="brave/brave-browser"
   [YoutubeMusic]="th-ch/Youtube-Music"
+  [Liquidctl]="liquidctl/liquidctl"
 )
 
 get_current_version() {
