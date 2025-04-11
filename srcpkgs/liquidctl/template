@@ -1,0 +1,24 @@
+# Template file for 'liquidctl'
+pkgname=liquidctl
+version=1.14.0
+revision=2
+build_style=python3-pep517
+hostmakedepends="python3-setuptools python3-setuptools_scm python3-wheel"
+depends="python3-setuptools python3-usb python3-colorlog python3-crcmod python3-hidapi python3-docopt python3-Pillow python3-smbus libusb"
+short_desc="Monitor and control liquid coolers and other devices"
+maintainer="juipeltje <joppe4444@outlook.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/jonasmalacofilho/liquidctl"
+distfiles="https://github.com/liquidctl/liquidctl/releases/download/v${version}/liquidctl-${version}.tar.gz"
+checksum="a90e3f36a13adbaf2f463adf0051f30107fd3d0edecac89f46a5bd931b2b54f2"
+
+post_install() {
+	vmkdir usr/lib/udev/rules.d
+	vinstall extra/linux/71-liquidctl.rules 644 usr/lib/udev/rules.d/  
+	vlicense LICENSE.txt
+	vdoc README.md
+	vman liquidctl.8
+	for f in docs/*.md; do
+		vdoc "$f"
+	done
+}
