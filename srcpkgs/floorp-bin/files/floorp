@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Shell script to start the Floorp browser.
+#
+# Start Floorp:
+exec /usr/lib/floorp/floorp "$@"
