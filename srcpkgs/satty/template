@@ -1,0 +1,18 @@
+# Template file for 'satty'
+pkgname=satty
+version=0.4.0
+revision=1
+build_style=cargo
+hostmakedepends="pkg-config rust gettext git"
+makedepends="gtk4-devel libadwaita-devel"
+short_desc="GTK4 screenshot annotation tool"
+maintainer="Aellas <zacpi@pm.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/gabm/Satty"
+distfiles="https://github.com/gabm/Satty/archive/refs/tags/v${version}.tar.gz"
+checksum=f17cafa858096fa3099c97a3ed7ef0b00688de0e4fea48779c4d07a916f16c78
+# Replace with the real checksum of the archive
+
+post_install() {
+	vlicense LICENSE
+}
