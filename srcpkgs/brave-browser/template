@@ -12,7 +12,7 @@ license="MPL-2.0"
 homepage="https://www.brave.com/"
 changelog="https://brave.com/latest/"
 distfiles="https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser-${version}-1.x86_64.rpm"
-checksum=403837597706c091e215c354c1d30fd9830bb897a063beb0907b6760f4f52c92
+checksum=196e0653384ac78597eb39116b7d4a8a95b8cdadd3d1f8070fd710d76a75c25c
 
 do_install() {
 	# Remove cron job
@@ -22,5 +22,3 @@ do_install() {
 	# Install the icon
 	vmkdir usr/share/pixmaps
 	vinstall opt/brave.com/brave/product_logo_128.png 644 usr/share/pixmaps brave-browser.png
-
-}
