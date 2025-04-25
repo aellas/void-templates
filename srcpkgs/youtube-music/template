@@ -1,6 +1,6 @@
 # Template file for 'youtube-music'
 pkgname=youtube-music
-version=3.8.0
+version=3.8.1
 revision=1
 archs="x86_64"
 hostmakedepends="tar xz"
@@ -9,7 +9,7 @@ maintainer="Array <zacpi@pm.me>"
 license="MIT"
 homepage="https://github.com/th-ch/youtube-music"
 distfiles="https://github.com/th-ch/youtube-music/releases/download/v${version}/youtube-music_${version}_amd64.deb"
-checksum="18e28f839659fd714d63115df77bb9d71cc27f64ab36135a5d44725ea5b9f256"
+checksum="f171422c4431855b5fbaad9fd3ae9ff7423fb60dab6e4b9bac6e45ecba920692"
 
 do_extract() {
 	ar x ${XBPS_SRCDISTDIR}/${pkgname}-${version}/youtube-music_${version}_amd64.deb
