@@ -16,6 +16,7 @@ cp -r my-template ~/void-packages/srcpkgs/
 cd ~/void-packages
 ./xbps-src pkg my-template
 ```
-
+## Credits
+Credits to the original authors of the templates, I'll do my best to keep them up to date!
 
 
