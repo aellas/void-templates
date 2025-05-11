@@ -35,6 +35,8 @@ for name in "${!templates[@]}"; do
   latest_clean=${latest_version#v}
 
   if [[ "$current_clean" != "$latest_clean" ]]; then
+    # Notify about the update
+    notify-send "$name: Update Available" "$current_version → $latest_version"
     echo "$name: Update available! $current_version → $latest_version"
   else
     echo "$name: Up to date ($current_version)"
